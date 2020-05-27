@@ -57,7 +57,7 @@ git checkout 49de1fc2910524c888866c7e2b0db1ba8af2a530
 sudo cmake . &&  make
 BORINGSSL=$PWD
 https://github.com/aakashk2910/quic_perf.git
-cd lsquic
+cd quic_perf
 git submodule init
 git submodule update
 #mkdir -p lib
