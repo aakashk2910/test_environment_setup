@@ -96,7 +96,7 @@ git clone https://github.com/aakashk2910/google_drive_test.git
 #echo new cron into cron file
 echo "0 */2 * * * cd /home/ubuntu/quic_tests/build/tls_test && sudo ./run_tls.sh top100ktls13.txt
 
-0 */2 * * * cd /home/ubuntu/quic_tests/build/quic_perf_test && sudo ./run_test.sh quic_support.txt
+59 */2 * * * cd /home/ubuntu/quic_tests/build/quic_perf_test && sudo ./run_test.sh quic_support.txt
 
 0 8 * * * cd /home/ubuntu/quic_tests/build/google_drive_test && sudo ./gdrive_test.sh target.csv
 
