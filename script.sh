@@ -9,6 +9,8 @@ mkdir build
 cd build
 
 #install CMAKE, Git and C
+sudo apt-get update -y
+sudo apt-get update
 sudo apt-get -y install git-core
 sudo apt-get -y install cmake
 sudo apt-get -y install build-essential
