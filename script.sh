@@ -45,6 +45,7 @@ fi
 git clone https://github.com/nghttp2/nghttp2.git
 cd nghttp2
 sudo apt-get -y install build-essential
+sudo apt-get -y install cmake
 sudo cmake .
 sudo make install
 sudo ldconfig
