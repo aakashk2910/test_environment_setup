@@ -97,13 +97,13 @@ git clone https://github.com/aakashk2910/google_drive_test.git
 #write out current crontab
 #crontab -l > mycron
 #echo new cron into cron file
-echo "0 */3 * * * cd /home/ubuntu/quic_tests/build/tls_test && sudo ./run_tls.sh top100ktls13.txt
+echo "0 */3 * * * cd /home/ubuntu/quic_tests/tls_test && sudo ./run_tls.sh top100ktls13.txt
 
-59 */3 * * * cd /home/ubuntu/quic_tests/build/quic_perf_test && sudo ./run_test.sh quic_support.txt
+59 */3 * * * cd /home/ubuntu/quic_tests/quic_perf_test && sudo ./run_test.sh quic_support.txt
 
-0 8 * * * cd /home/ubuntu/quic_tests/build/google_drive_test && sudo ./gdrive_test.sh target.csv
+0 8 * * * cd /home/ubuntu/quic_tests/google_drive_test && sudo ./gdrive_test.sh target.csv
 
-0 3 * * * cd /home/ubuntu/quic_tests/build/google_drive_test && sudo ./gdrive_test100.sh target_greater_than_100M.csv" >> mycron
+0 3 * * * cd /home/ubuntu/quic_tests/google_drive_test && sudo ./gdrive_test100.sh target_greater_than_100M.csv" >> mycron
 #install new cron file
 crontab mycron
 rm mycron
