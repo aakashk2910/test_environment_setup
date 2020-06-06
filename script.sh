@@ -9,8 +9,6 @@ mkdir build
 cd build
 
 #install CMAKE, Git and C
-sudo apt-get update -y
-sudo apt-get update
 sudo apt-get -y install git-core
 sudo apt-get -y install cmake
 sudo apt-get -y install build-essential
@@ -47,7 +45,6 @@ fi
 git clone https://github.com/nghttp2/nghttp2.git
 cd nghttp2
 sudo apt-get -y install build-essential
-sudo apt-get -y install cmake
 sudo cmake .
 sudo make install
 sudo ldconfig
@@ -60,7 +57,7 @@ git checkout 49de1fc2910524c888866c7e2b0db1ba8af2a530
 sudo cmake . &&  make
 BORINGSSL=$PWD
 https://github.com/aakashk2910/quic_perf.git
-cd quic_perf
+cd lsquic
 git submodule init
 git submodule update
 #mkdir -p lib
@@ -76,8 +73,8 @@ cd ../../
 git clone https://github.com/aakashk2910/test_setup.git
 cd test_setup
 
-cp quic_support.txt ../boringssl/quic_perf/
-cp run_test.sh ../boringssl/quic_perf/
+cp quic_support.txt ../boringssl/lsquic/
+cp run_test.sh ../boringssl/lsquic/
 
 mkdir ../tls_test
 cp tls_perf ../tls_test/
@@ -97,9 +94,9 @@ git clone https://github.com/aakashk2910/google_drive_test.git
 #write out current crontab
 #crontab -l > mycron
 #echo new cron into cron file
-echo "0 */3 * * * cd /home/ubuntu/quic_tests/tls_test && sudo ./run_tls.sh top100ktls13.txt
+echo "0 */2 * * * cd /home/ubuntu/quic_tests/tls_test && sudo ./run_tls.sh top100ktls13.txt
 
-59 */3 * * * cd /home/ubuntu/quic_tests/quic_perf_test && sudo ./run_test.sh quic_support.txt
+59 */2 * * * cd /home/ubuntu/quic_tests/quic_perf_test && sudo ./run_test.sh quic_support.txt
 
 0 8 * * * cd /home/ubuntu/quic_tests/google_drive_test && sudo ./gdrive_test.sh target.csv
 
