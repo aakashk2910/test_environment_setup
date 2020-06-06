@@ -76,8 +76,8 @@ cd ../../
 git clone https://github.com/aakashk2910/test_setup.git
 cd test_setup
 
-cp quic_support.txt ../boringssl/lsquic/
-cp run_test.sh ../boringssl/lsquic/
+cp quic_support.txt ../boringssl/quic_perf/
+cp run_test.sh ../boringssl/quic_perf/
 
 mkdir ../tls_test
 cp tls_perf ../tls_test/
